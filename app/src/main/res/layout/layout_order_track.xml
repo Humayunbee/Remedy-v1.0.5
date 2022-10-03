@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="track"
+            type="com.medicine.remedy.view_model.OrderHistoryViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/fifteen">
+
+            <LinearLayout
+                android:id="@id/ln_order_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/RobotoMedium"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:minWidth="@dimen/hundred"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent"
+                        android:paddingStart="@dimen/ten"
+                        android:paddingTop="@dimen/five"
+                        android:textSize="@dimen/fourteen"
+                        android:paddingEnd="@dimen/ten"
+                        android:paddingBottom="@dimen/five"
+                        android:singleLine="true"
+                        android:text="Order No"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tv_order_no"
+                        style="@style/RobotoRegular"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:minWidth="@dimen/hundred"
+                        android:gravity="center_vertical|end"
+                        android:layout_height="match_parent"
+                        android:paddingStart="@dimen/ten"
+                        android:paddingTop="@dimen/five"
+                        android:textSize="@dimen/fourteen"
+                        android:paddingEnd="@dimen/ten"
+                        android:paddingBottom="@dimen/five"
+                        android:singleLine="true"
+                        android:textColor="@color/black" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/RobotoMedium"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:minWidth="@dimen/hundred"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent"
+                        android:paddingStart="@dimen/ten"
+                        android:paddingTop="@dimen/five"
+                        android:textSize="@dimen/fourteen"
+                        android:paddingEnd="@dimen/ten"
+                        android:paddingBottom="@dimen/five"
+                        android:singleLine="true"
+                        android:text="Order Date"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tv_order_date"
+                        style="@style/RobotoRegular"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:minWidth="@dimen/hundred"
+                        android:gravity="center_vertical|end"
+                        android:layout_height="match_parent"
+                        android:paddingStart="@dimen/ten"
+                        android:paddingTop="@dimen/five"
+                        android:textSize="@dimen/fourteen"
+                        android:paddingEnd="@dimen/ten"
+                        android:paddingBottom="@dimen/five"
+                        android:singleLine="true"
+                        android:textColor="@color/black" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/RobotoMedium"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:minWidth="@dimen/hundred"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent"
+                        android:paddingStart="@dimen/ten"
+                        android:paddingTop="@dimen/five"
+                        android:textSize="@dimen/fourteen"
+                        android:paddingEnd="@dimen/ten"
+                        android:paddingBottom="@dimen/five"
+                        android:singleLine="true"
+                        android:text="Delivery Address"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tv_address"
+                        style="@style/RobotoRegular"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:minWidth="@dimen/hundred"
+                        android:gravity="center_vertical|end"
+                        android:layout_height="match_parent"
+                        android:paddingStart="@dimen/ten"
+                        android:paddingTop="@dimen/five"
+                        android:textSize="@dimen/fourteen"
+                        android:paddingEnd="@dimen/ten"
+                        android:paddingBottom="@dimen/five"
+                        android:text="@={track.mlDeliveryAddress}"
+                        android:singleLine="true"
+                        android:textColor="@color/black" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ln_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/ten"
+                android:layout_marginTop="@dimen/ten"
+                android:background="@color/colorAccent"
+                app:layout_constraintTop_toBottomOf="@+id/ln_order_info"
+                android:paddingBottom="@dimen/ten"
+                android:paddingStart="@dimen/eight"
+                android:paddingEnd="@dimen/eight">
+
+                <TextView
+                    style="@style/RobotoMedium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="Product Name"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fourteen" />
+
+                <TextView
+                    style="@style/RobotoMedium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Quantity"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fourteen" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    style="@style/RobotoMedium"
+                    android:layout_gravity="center_vertical"
+                    android:text="Price"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fourteen"/>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/ln_title"
+                tools:listitem="@layout/model_details_item"/>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/two"
+                android:background="@color/view_color"
+                app:layout_constraintTop_toBottomOf="@+id/rv_list"
+                android:layout_marginTop="@dimen/ten"/>
+
+            <LinearLayout
+                android:id="@+id/ln_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/view"
+                android:layout_marginTop="@dimen/ten"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sub total"
+                            android:minWidth="150dp"
+                            android:paddingStart="@dimen/ten"
+                            android:paddingEnd="@dimen/ten"
+                            android:textSize="@dimen/fourteen"
+                            android:paddingTop="@dimen/five"
+                            android:textColor="@color/black"
+                            style="@style/RobotoMedium"
+                            android:paddingBottom="@dimen/five"
+                            android:singleLine="true"/>
+
+                        <TextView
+                            android:id="@+id/tv_sub_total"
+                            style="@style/RobotoMedium"
+                            android:layout_width="wrap_content"
+                            android:minWidth="@dimen/hundred"
+                            android:gravity="center_vertical|end"
+                            android:layout_height="match_parent"
+                            android:paddingStart="@dimen/ten"
+                            android:paddingTop="@dimen/five"
+                            android:textSize="@dimen/fourteen"
+                            android:paddingEnd="@dimen/ten"
+                            android:text="@={track.mlDisplaySubTotal}"
+                            android:paddingBottom="@dimen/five"
+                            android:singleLine="true"
+                            android:textColor="@color/colorA" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:visibility="gone"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Delivery Fee : "
+                            android:paddingStart="@dimen/ten"
+                            android:paddingEnd="@dimen/ten"
+                            android:textSize="@dimen/fourteen"
+                            android:paddingTop="@dimen/five"
+                            android:textColor="@color/black"
+                            style="@style/RobotoRegular"
+                            android:paddingBottom="@dimen/five"
+                            android:singleLine="true"/>
+
+                        <TextView
+                            android:id="@+id/tv_delivery_fee"
+                            style="@style/RobotoMedium"
+                            android:layout_width="wrap_content"
+                            android:minWidth="@dimen/hundred"
+                            android:gravity="center_vertical|end"
+                            android:layout_height="match_parent"
+                            android:paddingStart="@dimen/ten"
+                            android:paddingTop="@dimen/five"
+                            android:paddingEnd="@dimen/ten"
+                            android:textSize="@dimen/fourteen"
+                            android:paddingBottom="@dimen/five"
+                            android:singleLine="true"
+                            android:text="60.00"
+                            android:textColor="@color/colorA" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ln_discount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Discount"
+                            android:minWidth="150dp"
+                            android:paddingStart="@dimen/ten"
+                            android:paddingEnd="@dimen/ten"
+                            android:paddingTop="@dimen/five"
+                            android:textSize="@dimen/fourteen"
+                            android:textColor="@color/black"
+                            style="@style/RobotoMedium"
+                            android:paddingBottom="@dimen/five"
+                            android:singleLine="true"/>
+
+                        <TextView
+                            android:id="@+id/tv_discount_amount"
+                            style="@style/RobotoMedium"
+                            android:layout_width="wrap_content"
+                            android:minWidth="@dimen/hundred"
+                            android:gravity="center_vertical|end"
+                            android:layout_height="match_parent"
+                            android:paddingStart="@dimen/ten"
+                            android:paddingTop="@dimen/five"
+                            android:textSize="@dimen/fourteen"
+                            android:paddingEnd="@dimen/ten"
+                            android:text="@={track.mlDisplaySubTotalDiscount}"
+                            android:paddingBottom="@dimen/five"
+                            android:singleLine="true"
+                            android:textColor="@color/colorA" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ln_delivery_charge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:visibility="gone"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/delivery_charge"
+                            android:paddingStart="@dimen/ten"
+                            android:minWidth="150dp"
+                            android:paddingEnd="@dimen/ten"
+                            android:paddingTop="@dimen/five"
+                            android:textSize="@dimen/fourteen"
+                            android:textColor="@color/black"
+                            style="@style/RobotoMedium"
+                            android:paddingBottom="@dimen/five"
+                            android:singleLine="true"/>
+
+                        <TextView
+                            android:id="@+id/tv_delivery_charge"
+                            style="@style/RobotoMedium"
+                            android:layout_width="wrap_content"
+                            android:minWidth="@dimen/hundred"
+                            android:gravity="center_vertical|end"
+                            android:layout_height="match_parent"
+                            android:paddingStart="@dimen/ten"
+                            android:paddingTop="@dimen/five"
+                            android:textSize="@dimen/fourteen"
+                            android:paddingEnd="@dimen/ten"
+                            android:paddingBottom="@dimen/five"
+                            android:singleLine="true"
+                            android:textColor="@color/colorA" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total"
+                            android:paddingStart="@dimen/ten"
+                            android:paddingEnd="@dimen/ten"
+                            android:paddingTop="@dimen/five"
+                            android:minWidth="150dp"
+                            android:textSize="@dimen/fourteen"
+                            android:textColor="@color/black"
+                            style="@style/RobotoMedium"
+                            android:paddingBottom="@dimen/five"
+                            android:singleLine="true"/>
+
+                        <TextView
+                            android:id="@+id/tv_total"
+                            style="@style/RobotoMedium"
+                            android:layout_width="wrap_content"
+                            android:minWidth="@dimen/hundred"
+                            android:gravity="center_vertical|end"
+                            android:layout_height="match_parent"
+                            android:paddingStart="@dimen/ten"
+                            android:paddingTop="@dimen/five"
+                            android:paddingEnd="@dimen/ten"
+                            android:textSize="@dimen/fourteen"
+                            android:paddingBottom="@dimen/five"
+                            android:text="@={track.mlDisplayGrandTotal}"
+                            android:singleLine="true"
+                            android:textColor="@color/colorPrimary" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_coupon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/ten"
+                    android:paddingEnd="@dimen/ten"
+                    android:paddingTop="@dimen/five"
+                    android:visibility="gone"
+                    android:textSize="@dimen/fourteen"
+                    android:layout_marginTop="@dimen/ten"
+                    android:textColor="@color/black"
+                    style="@style/RobotoRegular"
+                    android:paddingBottom="@dimen/five"
+                    android:drawablePadding="@dimen/ten"
+                    android:singleLine="true"
+                    app:drawableStartCompat="@drawable/ic_radio_button_20dp_checked" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ln_placed_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/ln_amount"
+                android:layout_marginTop="@dimen/twentyFive"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_placed_order"
+                        android:layout_width="@dimen/thirty"
+                        android:layout_height="@dimen/thirty"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/ic_done_white"
+                        android:background="@drawable/bg_circle_primary"/>
+
+                    <View
+                        android:layout_width="@dimen/two"
+                        android:layout_height="@dimen/view_height"
+                        android:background="@color/colorPrimary_opacity"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/ten"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="@dimen/fifteen">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/order_placed_history"
+                        android:textColor="@color/black"
+                        style="@style/RobotoMedium"
+                        android:textSize="@dimen/fourteen"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_placed_order"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorA"
+                        style="@style/RobotoRegular"
+                        android:textSize="@dimen/twelve"
+                        android:layout_marginTop="@dimen/eight"
+                        tools:text="Your order #1234 was placed on 15 th December 2020.Your order #1234 was placed on 15 th December 2020.Your order #1234 was placed on 15 th December 2020."/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ln_order_processing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/ln_placed_order"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/ten">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_processing_order"
+                        android:layout_width="@dimen/thirty"
+                        android:layout_height="@dimen/thirty"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/bg_circle_solid_red"/>
+
+                    <View
+                        android:layout_width="@dimen/two"
+                        android:layout_height="@dimen/view_height"
+                        android:background="@color/colorPrimary_opacity"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/ten"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="@dimen/fifteen">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/order_processing"
+                        android:textColor="@color/black"
+                        style="@style/RobotoMedium"
+                        android:textSize="@dimen/fourteen"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_processing_order"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorA"
+                        style="@style/RobotoRegular"
+                        android:textSize="@dimen/twelve"
+                        android:layout_marginTop="@dimen/eight"
+                        tools:text="Your order still needs to be processed by our store before sending it to you.Your order still needs to be processed by our store before sending it to you."/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ln_order_picked"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/ln_order_processing"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/ten">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_picked_order"
+                        android:layout_width="@dimen/thirty"
+                        android:layout_height="@dimen/thirty"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/bg_circle_solid_red"/>
+
+                    <View
+                        android:layout_width="@dimen/two"
+                        android:layout_height="@dimen/view_height"
+                        android:background="@color/colorPrimary_opacity"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/ten"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="@dimen/fifteen">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/order_picked"
+                        android:textColor="@color/black"
+                        style="@style/RobotoMedium"
+                        android:textSize="@dimen/fourteen"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_picked_order"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorA"
+                        style="@style/RobotoRegular"
+                        android:textSize="@dimen/twelve"
+                        android:layout_marginTop="@dimen/eight"
+                        tools:text="Your order has been picked up by one of our rider and its on your way.Your order has been picked up by one of our rider and its on your way.Your order has been picked up by one of our rider and its on your way."/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ln_order_delivering"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/ln_order_picked"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/ten">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_delivering_order"
+                        android:layout_width="@dimen/thirty"
+                        android:layout_height="@dimen/thirty"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/bg_circle_solid_red"/>
+
+                    <View
+                        android:layout_width="@dimen/two"
+                        android:layout_height="@dimen/view_height"
+                        android:background="@color/colorPrimary_opacity"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/ten"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="@dimen/fifteen">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/order_delivering"
+                        android:textColor="@color/black"
+                        style="@style/RobotoMedium"
+                        android:textSize="@dimen/fourteen"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_delivering_order"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorA"
+                        style="@style/RobotoRegular"
+                        android:textSize="@dimen/twelve"
+                        android:layout_marginTop="@dimen/eight"
+                        tools:text="The package is on your way. Make sure to be at the location to meet the courier.The package is on your way. Make sure to be at the location to meet the courier.The package is on your way. Make sure to be at the location to meet the courier.The package is on your way. Make sure to be at the location to meet the courier.The package is on your way. Make sure to be at the location to meet the courier.The package is on your way. Make sure to be at the location to meet the courier.The package is on your way. Make sure to be at the location to meet the courier.The package is on your way. Make sure to be at the location to meet the courier.The package is on your way. Make sure to be at the location to meet the courier.The package is on your way. Make sure to be at the location to meet the courier."/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ln_order_delivered"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/ln_order_delivering"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/ten">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_delivered_order"
+                        android:layout_width="@dimen/thirty"
+                        android:layout_height="@dimen/thirty"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/bg_circle_solid_red"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="@dimen/fifteen">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/delivered"
+                        android:textColor="@color/black"
+                        style="@style/RobotoMedium"
+                        android:textSize="@dimen/fourteen"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_delivered_order"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorA"
+                        style="@style/RobotoRegular"
+                        android:textSize="@dimen/twelve"
+                        android:layout_marginTop="@dimen/eight"
+                        tools:text="It seems like the package has arrived to you. Hope you are happy with it!"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

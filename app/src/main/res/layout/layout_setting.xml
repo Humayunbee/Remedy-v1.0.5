@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    
+    <data>
+        <variable
+            name="setting"
+            type="com.medicine.remedy.view_model.SettingViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            android:fitsSystemWindows="false"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/ln_user_information"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="@drawable/bg_toolbar_opacity_50">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_toolbar"
+                        android:paddingStart="@dimen/fifteen"
+                        android:paddingEnd="@dimen/fifteen"
+                        android:layout_marginBottom="@dimen/twelve"
+                        android:paddingTop="@dimen/thirty"
+                        android:paddingBottom="@dimen/thirty">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_image"
+                            android:layout_width="@dimen/profile_picture_width"
+                            android:layout_height="@dimen/profile_picture_height"
+                            android:layout_centerVertical="true"
+                            app:cardCornerRadius="@dimen/eight">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/iv_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_image_place_holder"
+                                android:scaleType="fitXY"/>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/ten"
+                            android:layout_marginTop="@dimen/ten"
+                            android:layout_marginEnd="@dimen/ten"
+                            android:layout_marginBottom="@dimen/ten"
+                            android:layout_toStartOf="@+id/tv_edit"
+                            android:layout_toEndOf="@+id/cv_image"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_user_name"
+                                style="@style/RobotoMedium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/user_name"
+                                android:padding="@dimen/five"
+                                android:singleLine="true"
+                                android:text="@={setting.mlUserName}"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_h2"
+                                tools:text="Atik Faysal" />
+
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tv_phone"
+                                style="@style/RobotoRegular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/phone_number"
+                                android:padding="@dimen/five"
+                                android:singleLine="true"
+                                android:text="@={setting.mlPhoneNumber}"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_h4"
+                                tools:text="+8801765611635" />
+
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_edit"
+                            style="@style/RobotoRegular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/bg_white_stroke"
+                            android:paddingStart="@dimen/twenty"
+                            android:visibility="gone"
+                            android:paddingTop="@dimen/five"
+                            android:paddingEnd="@dimen/twenty"
+                            android:paddingBottom="@dimen/five"
+                            android:text="@string/edit"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_h5" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ln_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/ln_user_information"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:padding="@dimen/fifteen"
+                        android:layout_marginTop="@dimen/ten">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/notification"
+                            android:layout_centerVertical="true"
+                            android:textSize="@dimen/text_size_h4"
+                            android:layout_marginStart="@dimen/ten"
+                            android:layout_toStartOf="@+id/sw_notification"
+                            android:layout_alignParentStart="true"
+                            android:textColor="@color/colorA"
+                            style="@style/RobotoMedium"
+                            android:padding="@dimen/five"/>
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/sw_notification"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/fifteen"
+                            android:layout_alignParentEnd="true"/>
+
+                    </RelativeLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/thirty"
+                        app:cardCornerRadius="@dimen/radius"
+                        android:elevation="@dimen/elevation"
+                        app:cardElevation="@dimen/elevation"
+                        app:cardMaxElevation="@dimen/elevation">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_margin="@dimen/fifteen">
+
+                            <RelativeLayout
+                                android:id="@+id/rl_favourites"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/favourite"
+                                    android:layout_centerVertical="true"
+                                    android:textSize="@dimen/text_size_h4"
+                                    android:layout_alignParentStart="true"
+                                    android:textColor="@color/colorA"
+                                    app:drawableStartCompat="@drawable/ic_favorite_sm"
+                                    android:drawablePadding="@dimen/ten"
+                                    style="@style/RobotoRegular"
+                                    android:padding="@dimen/five"/>
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_right_20dp_grey"
+                                    android:layout_centerVertical="true"
+                                    android:padding="@dimen/two"
+                                    android:layout_alignParentEnd="true"
+                                    android:background="@drawable/bg_circle_grey_solid"/>
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/one"
+                                android:background="@color/colorA"
+                                android:layout_marginStart="@dimen/twentyFive"
+                                android:layout_marginEnd="@dimen/twentyFive"
+                                android:layout_marginTop="@dimen/five"/>
+
+                            <RelativeLayout
+                                android:id="@+id/rl_order_history"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/twenty">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/order_history"
+                                    android:layout_centerVertical="true"
+                                    android:textSize="@dimen/text_size_h4"
+                                    android:layout_alignParentStart="true"
+                                    android:textColor="@color/colorA"
+                                    app:drawableStartCompat="@drawable/ic_order_history"
+                                    android:drawablePadding="@dimen/ten"
+                                    style="@style/RobotoRegular"
+                                    android:padding="@dimen/five"/>
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_right_20dp_grey"
+                                    android:layout_centerVertical="true"
+                                    android:padding="@dimen/two"
+                                    android:layout_alignParentEnd="true"
+                                    android:background="@drawable/bg_circle_grey_solid"/>
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/one"
+                                android:background="@color/colorA"
+                                android:layout_marginStart="@dimen/twentyFive"
+                                android:layout_marginEnd="@dimen/twentyFive"
+                                android:layout_marginTop="@dimen/five"/>
+
+                            <RelativeLayout
+                                android:id="@+id/rl_shipping_address"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/twenty">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/shipping_address"
+                                    android:layout_centerVertical="true"
+                                    android:textSize="@dimen/text_size_h4"
+                                    android:layout_alignParentStart="true"
+                                    android:textColor="@color/colorA"
+                                    app:drawableStartCompat="@drawable/ic_shipping_address_sm"
+                                    android:drawablePadding="@dimen/ten"
+                                    style="@style/RobotoRegular"
+                                    android:padding="@dimen/five"/>
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_right_20dp_grey"
+                                    android:layout_centerVertical="true"
+                                    android:padding="@dimen/two"
+                                    android:layout_alignParentEnd="true"
+                                    android:background="@drawable/bg_circle_grey_solid"/>
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/one"
+                                android:background="@color/colorA"
+                                android:layout_marginStart="@dimen/twentyFive"
+                                android:layout_marginEnd="@dimen/twentyFive"
+                                android:layout_marginTop="@dimen/five"/>
+
+                            <RelativeLayout
+                                android:id="@+id/rl_change_password"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/twenty">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/change_password"
+                                    android:layout_centerVertical="true"
+                                    android:textSize="@dimen/text_size_h4"
+                                    android:layout_alignParentStart="true"
+                                    android:textColor="@color/colorA"
+                                    app:drawableStartCompat="@drawable/ic_password_sm"
+                                    android:drawablePadding="@dimen/ten"
+                                    style="@style/RobotoRegular"
+                                    android:padding="@dimen/five"/>
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_right_20dp_grey"
+                                    android:layout_centerVertical="true"
+                                    android:padding="@dimen/two"
+                                    android:layout_alignParentEnd="true"
+                                    android:background="@drawable/bg_circle_grey_solid"/>
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/one"
+                                android:background="@color/colorA"
+                                android:layout_marginStart="@dimen/twentyFive"
+                                android:layout_marginEnd="@dimen/twentyFive"
+                                android:layout_marginTop="@dimen/five"/>
+
+                            <RelativeLayout
+                                android:id="@+id/rl_logout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/twenty">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/logout"
+                                    android:layout_centerVertical="true"
+                                    android:textSize="@dimen/text_size_h4"
+                                    android:layout_alignParentStart="true"
+                                    android:textColor="@color/colorA"
+                                    app:drawableStartCompat="@drawable/ic_logout_sm"
+                                    android:drawablePadding="@dimen/ten"
+                                    style="@style/RobotoRegular"
+                                    android:padding="@dimen/five"/>
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_right_20dp_grey"
+                                    android:layout_centerVertical="true"
+                                    android:padding="@dimen/two"
+                                    android:layout_alignParentEnd="true"
+                                    android:background="@drawable/bg_circle_grey_solid"/>
+
+                            </RelativeLayout>
+
+                            <View
+                                android:id="@+id/view_logout"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/one"
+                                android:background="@color/colorA"
+                                android:layout_marginStart="@dimen/twentyFive"
+                                android:layout_marginEnd="@dimen/twentyFive"
+                                android:layout_marginTop="@dimen/five"/>
+
+                            <RelativeLayout
+                                android:id="@+id/rl_login"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/twenty">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/login"
+                                    android:layout_centerVertical="true"
+                                    android:textSize="@dimen/text_size_h4"
+                                    android:layout_alignParentStart="true"
+                                    android:textColor="@color/colorA"
+                                    app:drawableStartCompat="@drawable/ic_login_sm"
+                                    android:drawablePadding="@dimen/ten"
+                                    style="@style/RobotoRegular"
+                                    android:padding="@dimen/five"/>
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_right_20dp_grey"
+                                    android:layout_centerVertical="true"
+                                    android:padding="@dimen/two"
+                                    android:layout_alignParentEnd="true"
+                                    android:background="@drawable/bg_circle_grey_solid"/>
+
+                            </RelativeLayout>
+
+                            <View
+                                android:id="@+id/view_login"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/one"
+                                android:background="@color/colorA"
+                                android:layout_marginStart="@dimen/twentyFive"
+                                android:layout_marginEnd="@dimen/twentyFive"
+                                android:layout_marginTop="@dimen/five"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/email_center"
+                        android:textSize="@dimen/text_size_h3"
+                        android:textColor="@color/text_color"
+                        android:gravity="center"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="@dimen/ten"
+                        style="@style/RobotoMedium"
+                        android:padding="@dimen/five"/>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <com.medicine.remedy.utils.MovableFloatingActionButton
+            android:id="@+id/fab_cell_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:backgroundTint="@color/colorPrimary"
+            android:src="@drawable/ic_support"
+            android:tint="@color/white"
+            app:layout_anchorGravity="center_horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="@dimen/fifteen"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

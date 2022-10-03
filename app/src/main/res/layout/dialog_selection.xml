@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="@dimen/ten"
+    android:layout_margin="@dimen/ten"
+    app:cardBackgroundColor="@color/white">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/fifteen"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_title"
+                    android:hint="Select options"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/twenty"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/iv_cancel"
+                    android:layout_alignParentStart="true"
+                    style="@style/RobotoRegular"
+                    android:padding="@dimen/five"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_cancel_24dp_red"
+                    android:layout_alignParentEnd="true"
+                    android:padding="@dimen/five"
+                    android:layout_centerVertical="true"
+                    tools:ignore="ContentDescription" />
+
+            </RelativeLayout>
+
+            <View
+                android:background="@color/view_color"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/one"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Search here"
+                    style="@style/RobotoRegular"
+                    android:background="@drawable/bg_search"
+                    android:padding="@dimen/eight"
+                    android:inputType="text"
+                    android:drawableEnd="@drawable/ic_search_24dp_white"
+                    android:textColor="@color/colorA"
+                    android:singleLine="true"
+                    android:textSize="@dimen/fifteen"/>
+
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/sv_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:defaultQueryHint="Search here"
+                    android:queryBackground="@android:color/transparent"
+                    android:fontFamily="sans-serif-light"
+                    android:textSize="@dimen/fourteen"
+                    android:alpha="0.5"
+                    app:queryHint="Search here"
+                    android:visibility="gone"
+                    android:layout_marginStart="@dimen/five"
+                    android:layout_marginEnd="@dimen/five"/>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/fifteen"
+                android:text="@string/apply"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/ln_location_info"
+                style="@style/RobotoMedium"
+                android:visibility="gone"
+                android:layout_margin="@dimen/thirty"
+                android:gravity="center"
+                android:background="@drawable/bg_button_red"/>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.cardview.widget.CardView>

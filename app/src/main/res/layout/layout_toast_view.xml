@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toast_layout_root"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_toast"
+    android:padding="@dimen/ten">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/five"
+        android:background="@drawable/bg_toast_icon"
+        android:padding="@dimen/divider_height"
+        android:src="@drawable/ic_info_toast" />
+
+    <LinearLayout
+        android:layout_toEndOf="@+id/iv_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/eight"
+        android:layout_marginEnd="@dimen/ten"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title"
+            style="@style/RobotoMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#2CD994"
+            android:textSize="@dimen/sixteen"
+            tools:text="Success" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_message"
+            style="@style/RobotoRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/divider_height"
+            android:textColor="@color/white"
+            android:maxLines="2"
+            android:textSize="@dimen/fourteen"
+            tools:text="Execution success" />
+
+    </LinearLayout>
+
+</RelativeLayout>

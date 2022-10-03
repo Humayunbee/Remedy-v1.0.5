@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingStart="@dimen/eight"
+    android:paddingEnd="@dimen/eight">
+
+    <LinearLayout
+        android:id="@+id/ln_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/ten"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingBottom="@dimen/ten"
+        android:paddingStart="@dimen/five"
+        android:paddingEnd="@dimen/five">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_product_name"
+            style="@style/RobotoMedium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:hint="Product Name"
+            tools:text="I-phone 11 max pro"
+            android:textColor="@color/colorA"
+            android:textSize="@dimen/fourteen" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_quantity"
+            style="@style/RobotoMedium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="Quantity"
+            tools:text="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/fourteen" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_price"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            style="@style/RobotoBold"
+            android:layout_gravity="center_vertical"
+            android:hint="Price"
+            tools:text="1110000"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/fourteen"/>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

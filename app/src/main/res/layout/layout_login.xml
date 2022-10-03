@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="login"
+            type="com.medicine.remedy.view_model.UserAuthenticationViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cv_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ln_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="vertical"
+            android:background="@drawable/bg_toolbar_opacity_50">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="180dp"
+                android:layout_height="80dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="@dimen/twentyFive"
+                android:layout_gravity="center_horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/logo"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/twentyFive">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/login"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_h2"
+                        style="@style/RobotoRegular"
+                        android:padding="@dimen/five"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/one"
+                        android:background="@color/white"
+                        android:layout_marginEnd="@dimen/fifteen"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/twenty">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/TextLabel">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_phone_number"
+                            style="@style/RobotoRegular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="@={login.mlPhoneNumber}"
+                            android:hint="@string/phone_number"
+                            android:backgroundTint="@color/white"
+                            android:textColor="@color/white"
+                            android:inputType="phone"
+                            android:maxLength="11"
+                            android:singleLine="true"
+                            android:textSize="@dimen/fifteen"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/fifteen"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/TextLabel">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/fifteen"
+                            android:hint="@string/password"
+                            android:backgroundTint="@color/white"
+                            android:text="@={login.mlPassword}"
+                            android:textColor="@color/white"
+                            android:singleLine="true"
+                            android:gravity="center_vertical"
+                            android:inputType="textPassword"
+                            style="@style/RobotoRegular"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_forgot_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/forgot_password"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/fourteen"
+                    android:gravity="center"
+                    android:layout_marginBottom="@dimen/twentyFive"
+                    android:layout_marginTop="@dimen/ten"
+                    android:layout_gravity="end"
+                    style="@style/RobotoRegular"
+                    android:padding="@dimen/five"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ln_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/ln_login"
+            android:translationY="-30dp"
+            android:layout_marginStart="@dimen/thirty"
+            android:layout_marginEnd="@dimen/thirty"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_sign_up"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorA"
+                android:textSize="@dimen/sixteen"
+                android:paddingTop="@dimen/eight"
+                android:elevation="@dimen/two"
+                android:paddingBottom="@dimen/eight"
+                android:paddingStart="@dimen/fifteen"
+                android:layout_marginEnd="@dimen/five"
+                android:paddingEnd="@dimen/fifteen"
+                android:layout_marginTop="@dimen/five"
+                android:layout_marginBottom="@dimen/five"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/bg_button_white"
+                android:text="@string/sing_up"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_login"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sixteen"
+                android:paddingTop="@dimen/eight"
+                android:elevation="@dimen/two"
+                android:layout_marginStart="@dimen/five"
+                android:paddingBottom="@dimen/eight"
+                android:layout_marginTop="@dimen/five"
+                android:layout_marginBottom="@dimen/five"
+                android:paddingStart="@dimen/fifteen"
+                android:paddingEnd="@dimen/fifteen"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/bg_button_black"
+                android:text="@string/login"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ln_social_media"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/ln_buttons"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/ten"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/or_sing_in"
+                android:textSize="@dimen/sixteen"
+                android:textColor="@color/colorA"
+                style="@style/RobotoRegular"
+                android:layout_gravity="center_horizontal"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fifteen"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_white_with_stroke"
+                    android:layout_marginEnd="@dimen/ten"
+                    android:padding="@dimen/two">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardElevation="0dp"
+                        app:cardCornerRadius="@dimen/five">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_google"
+                            android:padding="@dimen/eight"
+                            android:scaleType="fitXY"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_white_with_stroke"
+                    android:layout_marginStart="@dimen/ten"
+                    android:padding="@dimen/two">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardElevation="0dp"
+                        app:cardCornerRadius="@dimen/five">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_facebook"
+                            android:padding="@dimen/eight"
+                            android:scaleType="fitXY"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="address"
+            type="com.medicine.remedy.view_model.UserInformationViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="true"
+            android:padding="@dimen/twenty">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabelRed"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_title"
+                    style="@style/RobotoRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@={address.mlTitle}"
+                    android:hint="@string/title"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textColor="@color/colorPrimary"
+                    android:inputType="textCapSentences"
+                    android:singleLine="true"
+                    android:textSize="@dimen/fifteen"
+                    tools:text="58/C" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabelRed"
+                app:layout_constraintTop_toBottomOf="@+id/ti_title"
+                android:layout_marginTop="@dimen/ten">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_address"
+                    style="@style/RobotoRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@={address.mlAddress}"
+                    android:hint="@string/address"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textColor="@color/colorPrimary"
+                    android:inputType="textCapSentences"
+                    android:singleLine="true"
+                    android:textSize="@dimen/fifteen"
+                    tools:text="Shukrabad" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_receiver_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabelRed"
+                app:layout_constraintTop_toBottomOf="@+id/ti_area"
+                android:layout_marginTop="@dimen/ten">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_receiver_name"
+                    style="@style/RobotoRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@={address.mlReceiverName}"
+                    android:hint="@string/receiver_name"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textColor="@color/colorPrimary"
+                    android:inputType="textCapSentences"
+                    android:singleLine="true"
+                    android:textSize="@dimen/fifteen"
+                    tools:text="Atik Faysal" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabelRed"
+                app:layout_constraintTop_toBottomOf="@+id/ti_receiver_name"
+                android:layout_marginTop="@dimen/ten">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_phone_number"
+                    style="@style/RobotoRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@={address.mlPhoneNo}"
+                    android:hint="@string/phone_number"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textColor="@color/colorPrimary"
+                    android:inputType="phone"
+                    android:singleLine="true"
+                    android:textSize="@dimen/fifteen"
+                    tools:text="+8801765611635" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_pin_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabelRed"
+                android:clickable="true"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/ti_phone_number"
+                android:layout_marginTop="@dimen/ten">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_pin_location"
+                    style="@style/RobotoRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:hint="@string/pin_location"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:textColor="@color/colorPrimary"
+                    android:inputType="textCapSentences"
+                    android:drawablePadding="@dimen/ten"
+                    android:drawableStart="@drawable/ic_location_primary_20dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/fifteen" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/ln_address_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten"
+                app:layout_constraintTop_toBottomOf="@+id/ti_phone_number"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:text="@string/address_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/fifteen"
+                    android:textColor="@color/colorPrimary_opacity"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_home"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/radio_home"
+                        android:textSize="@dimen/fifteen"
+                        android:padding="@dimen/five" />
+
+                    <RadioButton
+                        android:id="@+id/rb_office"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/radio_office"
+                        android:textSize="@dimen/fifteen"
+                        android:padding="@dimen/five" />
+
+                    <RadioButton
+                        android:id="@+id/rb_other"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/radio_other"
+                        android:textSize="@dimen/fifteen"
+                        android:padding="@dimen/five" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb_default_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_address"
+                app:layout_constraintTop_toBottomOf="@+id/ln_address_type"
+                android:layout_marginTop="@dimen/ten"
+                android:textColor="@color/colorPrimary"
+                style="@style/RobotoMedium"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sixteen"
+                android:paddingTop="@dimen/eight"
+                android:layout_gravity="center_horizontal"
+                android:elevation="@dimen/two"
+                android:paddingBottom="@dimen/eight"
+                android:paddingStart="@dimen/sixty"
+                android:paddingEnd="@dimen/sixty"
+                android:layout_marginTop="@dimen/twentyFive"
+                android:layout_marginBottom="@dimen/twentyFive"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                app:layout_constraintTop_toBottomOf="@+id/cb_default_address"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="@drawable/bg_button_red"
+                android:text="@string/save_address"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/divider_height"
+    android:paddingTop="@dimen/five"
+    android:paddingBottom="@dimen/five"
+    android:elevation="@dimen/zero"
+    app:cardElevation="@dimen/zero"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="90dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/five"
+            app:cardCornerRadius="@dimen/eight">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/five"
+                android:scaleType="fitXY"
+                android:src="@drawable/logo"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_product_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fourteen"
+                    android:padding="@dimen/five"
+                    android:maxLines="2"
+                    tools:text="Beef burger"
+                    style="@style/RobotoMedium"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_size_h5"
+                    android:gravity="center_vertical|end"
+                    android:layout_marginEnd="@dimen/ten"
+                    tools:text="25.00"
+                    android:padding="@dimen/five"
+                    style="@style/RobotoBold"/>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_h6"
+                android:padding="@dimen/five"
+                tools:text="Size : S"
+                style="@style/RobotoMedium"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/five"
+                    android:elevation="@dimen/two"
+                    app:cardElevation="@dimen/two"
+                    android:layout_margin="@dimen/divider_height">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_decrease"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_decrease_25_grey"
+                            android:padding="@dimen/five"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_quantity"
+                            style="@style/RobotoMedium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_gravity="center_vertical"
+                            android:hint="@string/qty"
+                            android:maxLength="2"
+                            android:padding="@dimen/five"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_h6"
+                            app:layout_constraintTop_toBottomOf="@+id/ln_review" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_increase"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_increase_25_grey"
+                            android:padding="@dimen/five"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/five"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_cancel_24dp_red"/>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

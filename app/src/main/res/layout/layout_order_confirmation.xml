@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_success"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/order_placed"
+                android:textSize="@dimen/text_size_h1"
+                android:layout_marginTop="@dimen/fifteen"
+                android:textColor="@color/black"
+                style="@style/RobotoMedium"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_invoice_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_h4"
+                android:layout_marginTop="@dimen/ten"
+                android:gravity="center"
+                android:textColor="@color/colorA"
+                style="@style/RobotoRegular"/>
+
+            <LinearLayout
+                android:id="@+id/ln_order_history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_button_red"
+                android:layout_marginTop="@dimen/twentyFive"
+                android:padding="@dimen/ten">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_h3"
+                    android:gravity="center"
+                    android:text="@string/order_history"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/ten"
+                    android:textColor="@color/white"
+                    style="@style/RobotoRegular"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_right_red_25dp"
+                    android:background="@drawable/bg_circle"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/ten"
+                    android:padding="@dimen/five"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

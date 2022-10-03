@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="payment"
+            type="com.medicine.remedy.view_model.OrderViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_bkash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/fifteen"
+            android:paddingStart="@dimen/eight"
+            android:paddingEnd="@dimen/eight">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_bkash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_bkash"
+                android:layout_alignParentStart="true"
+                android:padding="@dimen/five"/>
+
+            <LinearLayout
+                android:id="@+id/ln_bk_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/iv_bkash"
+                android:layout_toStartOf="@+id/iv_bkash_forward"
+                android:layout_marginStart="@dimen/eight"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bkash_payment"
+                    android:textColor="@color/black"
+                    style="@style/RobotoMedium"
+                    android:textSize="@dimen/text_size_h4"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bkash_payment_sub"
+                    android:textColor="@color/colorA"
+                    style="@style/RobotoMedium"
+                    android:textSize="@dimen/text_size_h6"/>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_bkash_forward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_right_20dp_grey"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/five"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_nagad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/rl_bkash"
+            android:layout_marginTop="@dimen/fifteen"
+            android:paddingStart="@dimen/eight"
+            android:paddingEnd="@dimen/eight">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_nagad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_nagad"
+                android:layout_alignParentStart="true"
+                android:padding="@dimen/five"/>
+
+            <LinearLayout
+                android:id="@+id/ln_ng_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/iv_nagad"
+                android:layout_toStartOf="@+id/iv_nagad_forward"
+                android:layout_marginStart="@dimen/eight"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nagad_payment"
+                    android:textColor="@color/black"
+                    style="@style/RobotoMedium"
+                    android:textSize="@dimen/text_size_h4"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nagad_payment_sub"
+                    android:textColor="@color/colorA"
+                    style="@style/RobotoMedium"
+                    android:textSize="@dimen/text_size_h6"/>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_nagad_forward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_right_20dp_grey"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/five"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/rl_nagad"
+            android:layout_marginTop="@dimen/fifteen"
+            android:paddingStart="@dimen/eight"
+            android:paddingEnd="@dimen/eight">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_card"
+                android:layout_alignParentStart="true"
+                android:padding="@dimen/five"/>
+
+            <LinearLayout
+                android:id="@+id/ln_card_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/iv_card"
+                android:layout_toStartOf="@+id/iv_card_forward"
+                android:layout_marginStart="@dimen/eight"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/card_payment"
+                    android:textColor="@color/black"
+                    style="@style/RobotoMedium"
+                    android:textSize="@dimen/text_size_h4"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/card_payment_sub"
+                    android:textColor="@color/colorA"
+                    style="@style/RobotoMedium"
+                    android:textSize="@dimen/text_size_h6"/>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_card_forward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_right_20dp_grey"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/five"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_cod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/rl_card"
+            android:layout_marginTop="@dimen/fifteen"
+            android:paddingStart="@dimen/eight"
+            android:paddingEnd="@dimen/eight">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_cod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_cod"
+                android:layout_alignParentStart="true"
+                android:padding="@dimen/five"/>
+
+            <LinearLayout
+                android:id="@+id/ln_cod_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/iv_cod"
+                android:layout_toStartOf="@+id/iv_cod_forward"
+                android:layout_marginStart="@dimen/eight"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cod"
+                    android:textColor="@color/black"
+                    style="@style/RobotoMedium"
+                    android:textSize="@dimen/text_size_h4"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cod_sub"
+                    android:textColor="@color/colorA"
+                    style="@style/RobotoMedium"
+                    android:textSize="@dimen/text_size_h6"/>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_cod_forward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_right_20dp_grey"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/five"/>
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="prod"
+            type="int" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar_white"
+            layout="@layout/layout_toolbar_white"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <include
+            android:id="@+id/empty_view"
+            layout="@layout/layout_empty_view"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_search_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_white"
+            android:layout_margin="@dimen/ten">
+
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/et_search"
+                style="@style/RobotoRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_search"
+                android:drawableStart="@drawable/ic_search_24dp_white"
+                android:gravity="center_vertical"
+                android:hint="@string/search_box_hint"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:padding="@dimen/eight"
+                android:singleLine="true"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/fifteen" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_cancel_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/five"
+                android:layout_alignParentEnd="true"
+                android:padding="@dimen/eight"
+                android:visibility="gone"
+                android:src="@drawable/ic_cancel_grey_24dp"/>
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            tools:listitem="@layout/model_product"
+            android:layout_marginTop="@dimen/ten"
+            android:layout_marginBottom="@dimen/ten"
+            app:layout_constraintBottom_toTopOf="@+id/progressBar"
+            app:layout_constraintTop_toBottomOf="@+id/rl_search_box"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="@dimen/divider_height"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="gone"
+            android:textSize="@dimen/sixteen"
+            style="@style/RobotoMedium"
+            android:text="@string/loading"
+            android:padding="@dimen/five"
+            android:layout_alignParentEnd="true"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

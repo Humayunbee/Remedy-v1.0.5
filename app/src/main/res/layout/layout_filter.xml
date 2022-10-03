@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="nav"
+            type="int" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="@dimen/five"
+            android:src="@drawable/ic_cancel"
+            android:padding="@dimen/five"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/iv_cancel"
+            app:layout_constraintBottom_toTopOf="@+id/ln_buttons"
+            android:layout_marginBottom="@dimen/ten">
+
+            <RelativeLayout
+                android:id="@+id/ln_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="@dimen/fifteen"
+                android:layout_marginEnd="@dimen/fifteen"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_search"
+                    style="@style/RobotoRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_search"
+                    android:drawableStart="@drawable/ic_search_24dp_white"
+                    android:gravity="center_vertical"
+                    android:hint="@string/search_here"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:padding="@dimen/eight"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fifteen" />
+
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/sv_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:defaultQueryHint="Search here"
+                    android:queryBackground="@android:color/transparent"
+                    android:fontFamily="sans-serif-light"
+                    android:textSize="@dimen/fourteen"
+                    android:alpha="0.5"
+                    app:queryHint="Search here"
+                    android:visibility="gone"
+                    android:layout_marginStart="@dimen/five"
+                    android:layout_marginEnd="@dimen/five"/>
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/view_color"
+                tools:listitem="@layout/model_company_name"
+                android:layout_margin="@dimen/fifteen"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ln_buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/fifteen"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_negative_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/fifteen"
+                android:textColor="@color/black"
+                android:minWidth="100dp"
+                app:textAllCaps="true"
+                android:padding="@dimen/five"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/bg_search"
+                android:layout_marginEnd="@dimen/ten"
+                android:gravity="center"
+                android:text="Clear"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_positive_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/fifteen"
+                android:minWidth="100dp"
+                android:textColor="@color/black"
+                android:background="@drawable/bg_search"
+                android:gravity="center"
+                app:textAllCaps="true"
+                android:padding="@dimen/five"
+                android:layout_marginStart="@dimen/ten"
+                android:layout_gravity="center_horizontal"
+                android:text="Apply"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

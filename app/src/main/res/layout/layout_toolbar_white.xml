@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/ten"
+        android:paddingEnd="@dimen/ten"
+        android:paddingTop="@dimen/ten"
+        android:paddingBottom="@dimen/ten">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title"
+            style="@style/PlayFairBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/ln_menu"
+            android:drawablePadding="@dimen/ten"
+            android:hint="@string/toolbar_title"
+            android:padding="@dimen/five"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_h3"
+            app:drawableStartCompat="@drawable/ic_back_red"
+            tools:text="Menu" />
+
+        <LinearLayout
+            android:id="@+id/ln_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_search_black"
+                android:visibility="gone"
+                android:padding="@dimen/five" />
+
+            <RelativeLayout
+                android:id="@id/rl_noti"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:padding="@dimen/five">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@id/iv_notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/two"
+                    android:src="@drawable/ic_notification" />
+
+                <TextView
+                    android:id="@id/noti_badge"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="right|end|top"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/ic_badge_15dp"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:visibility="gone"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/ten" />
+
+            </RelativeLayout>
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_nave_menu"
+                android:padding="@dimen/five" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_filter"
+                android:visibility="gone"
+                android:padding="@dimen/five" />
+
+            <RelativeLayout
+                android:id="@+id/rl_cart"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:visibility="gone"
+                android:layout_marginEnd="@dimen/five">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/two"
+                    android:src="@drawable/ic_cart" />
+
+                <TextView
+                    android:id="@+id/cart_badge"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="right|end|top"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/ic_badge_15dp"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/ten" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

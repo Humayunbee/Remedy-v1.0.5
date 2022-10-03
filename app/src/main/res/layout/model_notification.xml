@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="@dimen/divider_height"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/five">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_date"
+            android:gravity="center_vertical"
+            tools:text="PROMO DELIVERY NOTIFICATION"
+            android:maxLines="2"
+            android:textSize="@dimen/fourteen"
+            android:textColor="@color/black"
+            android:padding="@dimen/five"
+            style="@style/RobotoMedium"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_date"
+            style="@style/RobotoMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/five"
+            android:textSize="@dimen/ten"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/colorPrimary_opacity"
+            tools:text="2021 Mar 12 09:55 AM" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title"
+            app:layout_constraintStart_toStartOf="parent"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toStartOf="@+id/iv_read_icon"
+            tools:text="Your Promotional Products has been delivered via DIRECT HANDOVER. Please confirm through Apps when received."
+            android:maxLines="5"
+            android:textColor="@color/colorA"
+            android:textSize="@dimen/thirteen"
+            android:padding="@dimen/five"
+            style="@style/RobotoRegular"
+            android:layout_marginBottom="@dimen/five"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_read_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_bold_point_red"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

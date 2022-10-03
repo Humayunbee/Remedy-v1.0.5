@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/cv_root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardElevation="@dimen/zero"
+    android:layout_marginBottom="@dimen/divider_height">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/five">
+
+        <LinearLayout
+            android:id="@+id/ln_order_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/ln_option"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_invoice"
+                style="@style/RobotoMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="@dimen/five"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fifteen"
+                tools:text="INV-2231225" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_address"
+                style="@style/RobotoRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/ten"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:paddingStart="@dimen/five"
+                android:paddingEnd="@dimen/five"
+                android:textColor="@color/colorA"
+                android:textSize="@dimen/twelve"
+                tools:text="House:100, Road: 11,Block:C,Dhaka 1213" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_order_date"
+                    style="@style/RobotoRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/ten"
+                    android:gravity="center_vertical"
+                    android:maxLines="2"
+                    android:paddingStart="@dimen/five"
+                    android:layout_centerVertical="true"
+                    android:paddingEnd="@dimen/five"
+                    android:textColor="@color/colorA"
+                    android:textSize="@dimen/twelve"
+                    tools:text="Placed: 05 Apr 2021" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_status"
+                    style="@style/RobotoMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="end"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/twelve"
+                    tools:text="On Process" />
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_coupon_code"
+                style="@style/RobotoRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/five"
+                android:drawablePadding="@dimen/five"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:paddingStart="@dimen/five"
+                android:paddingEnd="@dimen/five"
+                android:textColor="@color/colorA"
+                android:textSize="@dimen/twelve"
+                android:visibility="gone"
+                app:drawableStartCompat="@drawable/ic_bold_point_red"
+                tools:text="BIJOY16 coupon is applied" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/eight">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_payment_type"
+                    style="@style/RobotoRegular"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/fifteen"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/five"
+                    android:paddingTop="@dimen/two"
+                    android:paddingEnd="@dimen/five"
+                    android:paddingBottom="@dimen/two"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fourteen"
+                    android:visibility="gone"
+                    tools:text="Payment Type: Cash" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_total_bill"
+            style="@style/RobotoMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/ten"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/fifteen"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/five"
+            android:paddingTop="@dimen/two"
+            android:paddingEnd="@dimen/five"
+            android:paddingBottom="@dimen/two"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/fourteen"
+            tools:text="Total Bill: 11,210.00" />
+
+        <LinearLayout
+            android:id="@+id/ln_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/five"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:layout_alignParentEnd="true">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_forward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_right_20dp_grey"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

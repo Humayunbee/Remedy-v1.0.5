@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/five"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="@dimen/five"
+        android:layout_marginEnd="@dimen/five"
+        android:layout_marginTop="@dimen/five"
+        android:gravity="center_vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorA"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/fifteen"
+            app:textAllCaps="true"
+            android:padding="@dimen/five"
+            app:drawableStartCompat="@drawable/ic_radio_button_20dp_checked"
+            android:drawablePadding="@dimen/ten"
+            style="@style/RobotoMedium"
+            tools:text="Main"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_change"
+            style="@style/RobotoRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:drawablePadding="@dimen/ten"
+            android:visibility="gone"
+            android:gravity="center_vertical"
+            android:padding="@dimen/five"
+            android:text="@string/change"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/fifteen" />
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/fifteen"
+        app:layout_constraintTop_toBottomOf="@+id/rl_top"
+        android:padding="@dimen/five"
+        android:drawablePadding="@dimen/ten"
+        style="@style/RobotoMedium"
+        tools:text="21/1A Sukrabad Dhanmondi 31, Dhaka 1207, Bangladesh"
+        android:layout_margin="@dimen/five"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/two"
+        app:layout_constraintTop_toBottomOf="@+id/tv_address"
+        android:layout_margin="@dimen/eight"
+        android:background="@color/view_color"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

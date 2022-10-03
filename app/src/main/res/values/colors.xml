@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#0E76BD</color>
+    <color name="colorPrimaryDark">#0564A5</color>
+    <color name="colorAccent">#58AEE8</color>
+    <color name="colorPrimary_opacity">#66B8F1</color>
+    <color name="btn_bg_color">#FFE0E6</color>
+
+    <color name="icon_bg_color_opacity_50">#80D6D6D6</color>
+
+    <color name="colorA">#727C8E</color>
+    <color name="colorB">#A6B4D0</color>
+    <color name="colorC">#F2F4F8</color>
+    <color name="view_color">#E4E8F1</color>
+    <color name="colorD">#0564A5</color>
+    <color name="colorE">#4D727C8E</color>
+    <color name="colorF">#BFC5D1</color>
+    <color name="yellow">#FFC851</color>
+    <color name="pending_color">#80FFC851</color>
+    <color name="picked_color">#95DBF6</color>
+    <color name="shipped_color">#4CAF50</color>
+
+
+    <color name="view_background">#757575</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="text_color">#282F39</color>
+    <color name="sub_text_color">#A6282F39</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="white_a">#F5F9FC</color>
+    <color name="white_b">#30303033</color>
+    <color name="white_c">#D6D6D6</color>
+    <color name="white_c_80">#80D6D6D6</color>
+    <color name="white_d">#CCCCCC</color>
+    <color name="white_e">#0000001A</color>
+    <color name="white_f">#939EA8</color>
+    <color name="white_g">#E5E5E5</color>
+
+    <color name="black">#000000</color>
+    <color name="black_a">#282F39</color>
+    <color name="black_b">#29293D</color>
+    <color name="black_c">#3B414B</color>
+    <color name="black_d">#515760</color>
+    <color name="black_e">#1A1F29</color>
+    <color name="black_f">#42526E</color>
+    <color name="black_g">#172B4D</color>
+    <color name="black_h">#040505</color>
+    <color name="black_i">#C1C7D0</color>
+
+    <color name="yellow_a">#FCD300</color>
+    <color name="yellow_b">#F3BF45</color>
+    <color name="yellow_b_50">#80F3BF45</color>
+    <color name="yellow_b_15">#26FCD300</color>
+    <color name="yellow_c">#FFCC55</color>
+    <color name="yellow_d">#EEBF00</color>
+    <color name="yellow_e">#FFD422</color>
+    <color name="yellow_f">#FFF5CC</color>
+    <color name="yellow_g">#FEF8DB</color>
+    <color name="yellow_h">#FAE152</color>
+    <color name="yellow_j">#FFF9D9</color>
+    <color name="yellow_k">#FC9C00</color>
+
+
+    <color name="purpel">#FDCF00A6</color>
+
+    <!--grey-->
+    <color name="md_grey_200">#EEEEEE</color>
+    <color name="md_grey_300">#E0E0E0</color>
+    <color name="md_grey_400">#BDBDBD</color>
+    <color name="md_grey_500">#9E9E9E</color>
+    <color name="md_grey_600">#757575</color>
+    <color name="md_grey_700">#616161</color>
+    <color name="md_grey_800">#424242</color>
+
+    <color name="icon_color_grey">#707070</color>
+
+    <!-- category stroke, background and text color -->
+    <color name="red_stroke">#DE1818</color>
+    <color name="red_background">#FEF3F3</color>
+    <color name="green_stroke">#3318DE8A</color>
+    <color name="green_background">#F3FEF9</color>
+    <color name="yellow_stroke">#FCD508</color>
+    <color name="yellow_background">#FFFCEC</color>
+    <color name="pink_stroke">#33F2A6E0</color>
+    <color name="pink_background">#FEF3FB</color>
+    <color name="purpel_stroke">#33B018DE</color>
+    <color name="purpel_background">#33FBF3FE</color>
+
+    <!-- Custom toast colors -->
+    <color name="success_color">#2CD994</color>
+    <color name="success_bg_color">#3358F0B3</color>
+    <color name="error_color">#FF5151</color>
+    <color name="error_bg_color">#33DC5959</color>
+    <color name="warning_color">#FF6B00</color>
+    <color name="warning_bg_color">#33E6823A</color>
+    <color name="info_color">#4693FF</color>
+    <color name="info_bg_color">#33528AD8</color>
+
+</resources>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="validation"
+            type="com.medicine.remedy.view_model.UserAuthenticationViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/top_shape"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/bg_toolbar_opacity_50"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fifteen"
+                android:padding="@dimen/eight">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/five"
+                    android:src="@drawable/ic_back_white"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/verification"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_h2"
+                    style="@style/RobotoRegular"
+                    android:layout_centerHorizontal="true"
+                    android:padding="@dimen/five"/>
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/twenty"
+                android:layout_marginStart="@dimen/twenty"
+                android:layout_marginTop="@dimen/thirty"
+                android:layout_marginBottom="@dimen/thirty"
+                android:translationY="15dp"
+                app:cardCornerRadius="@dimen/eight"
+                android:layout_below="@+id/rl_toolbar"
+                app:cardElevation="@dimen/eight">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/fifteen">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/one_step_away"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_h3"
+                        style="@style/RobotoMedium"
+                        android:padding="@dimen/five"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/enter_otp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_h4"
+                        style="@style/RobotoLight"
+                        android:padding="@dimen/five"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_phone_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/phone_number"
+                        android:text="@={validation.mlUserPhoneNumber}"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_size_h4"
+                        style="@style/RobotoMedium"
+                        android:padding="@dimen/five"/>
+
+                    <com.mukesh.OtpView
+                        android:id="@+id/otp_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        app:itemWidth="35dp"
+                        app:itemHeight="35dp"
+                        android:itemBackground="@color/white"
+                        android:textColor="@color/colorPrimary"
+                        app:itemCount="6"
+                        app:itemSpacing="@dimen/five"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center_horizontal"
+                        app:lineColor="@color/colorPrimary_opacity"
+                        app:itemRadius="@dimen/five"
+                        app:viewType="rectangle"
+                        style="@style/OtpWidget.OtpView"
+                        android:layout_marginTop="@dimen/twenty"
+                        android:layout_marginBottom="@dimen/twenty"
+                        app:cursorColor="@color/colorPrimary"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_resend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/resend"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/fourteen"
+                            style="@style/RobotoMedium"
+                            android:padding="@dimen/five"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/one"
+                            android:background="@color/colorPrimaryDark"
+                            android:layout_marginStart="@dimen/five"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_continue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/fourteen"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingTop="@dimen/eight"
+            app:layout_constraintTop_toBottomOf="@+id/top_shape"
+            android:elevation="@dimen/two"
+            android:paddingBottom="@dimen/eight"
+            android:paddingStart="@dimen/sixty"
+            android:paddingEnd="@dimen/sixty"
+            android:layout_margin="@dimen/twenty"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:background="@drawable/bg_button_black"
+            android:text="@string/continue_text"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_continue"
+            android:layout_margin="@dimen/twenty"
+            android:layout_gravity="center_horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/logo"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

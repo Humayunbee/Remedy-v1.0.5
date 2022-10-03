@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:id="@+id/ln_root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/five"
+    android:layout_marginBottom="@dimen/five"
+    android:layout_marginStart="@dimen/divider_height"
+    android:layout_marginEnd="@dimen/divider_height"
+    app:cardCornerRadius="@dimen/eight"
+    android:elevation="@dimen/five"
+    android:layout_gravity="center_horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:padding="@dimen/five">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_image"
+                android:layout_width="110dp"
+                android:layout_height="100dp"
+                android:src="@drawable/logo"
+                android:scaleType="fitXY"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_product_title"
+                style="@style/RobotoMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/product"
+                android:maxLines="2"
+                android:padding="@dimen/two"
+                android:textColor="@color/black"
+                android:textSize="@dimen/twelve"
+                tools:text="Napa Extra" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_description"
+                style="@style/RobotoRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/product"
+                android:maxLines="2"
+                android:padding="@dimen/two"
+                android:text="JMI | Medicine"
+                android:textColor="@color/black"
+                android:textSize="@dimen/eight" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_discount_price"
+                    style="@style/RobotoRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/two"
+                    android:padding="@dimen/two"
+                    android:singleLine="true"
+                    android:textColor="@color/colorA"
+                    android:textSize="@dimen/twelve"
+                    android:visibility="invisible"
+                    tools:text="1200" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_price"
+                    style="@style/RobotoMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/two"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/twelve"
+                    tools:text="1200" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/twelve"
+            android:hint="@string/discount"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/bg_discount"
+            style="@style/RobotoMedium"
+            android:layout_margin="@dimen/divider_height"
+            android:visibility="gone"
+            tools:text="10% Off"
+            android:paddingStart="@dimen/five"
+            android:paddingEnd="@dimen/five"
+            android:paddingTop="@dimen/divider_height"
+            android:paddingBottom="@dimen/five"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

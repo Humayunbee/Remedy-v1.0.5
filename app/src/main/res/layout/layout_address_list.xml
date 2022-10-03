@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    
+    <data>
+        <variable
+            name="address"
+            type="com.medicine.remedy.view_model.UserInformationViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/rv_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            tools:itemCount="2"
+            app:layout_constraintBottom_toTopOf="@id/horizontal_barrier"
+            tools:listitem="@layout/model_address"/>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/horizontal_barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="top" />
+
+        <RelativeLayout
+            android:id="@+id/rl_add_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/horizontal_barrier"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/bg_button_red_with_stroke"
+            android:layout_margin="@dimen/twenty">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/fifteen"
+                android:layout_marginTop="@dimen/fifteen"
+                android:layout_marginEnd="@dimen/fifteen"
+                android:layout_marginBottom="@dimen/fifteen"
+                android:drawablePadding="@dimen/five"
+                android:text="@string/add_new_address"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                app:drawableStartCompat="@drawable/ic_add_primary_20dp" />
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    
+</layout>

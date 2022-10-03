@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="zero">0sp</dimen>
+    <dimen name="one">1sp</dimen>
+    <dimen name="two">2sp</dimen>
+    <dimen name="five">5sp</dimen>
+    <dimen name="eight">8sp</dimen>
+    <dimen name="ten">10sp</dimen>
+    <dimen name="twelve">12sp</dimen>
+    <dimen name="thirteen">13sp</dimen>
+    <dimen name="fourteen">14sp</dimen>
+    <dimen name="fifteen">15sp</dimen>
+    <dimen name="sixteen">16sp</dimen>
+    <dimen name="eighteen">18sp</dimen>
+    <dimen name="twenty">20sp</dimen>
+    <dimen name="twentyFive">25sp</dimen>
+    <dimen name="thirty">30sp</dimen>
+    <dimen name="sixty">60sp</dimen>
+    <dimen name="hundred">100sp</dimen>
+    <dimen name="view_height">70sp</dimen>
+
+    <dimen name="product_image_height">90sp</dimen>
+    <dimen name="restaurant_image_height">80sp</dimen>
+    <dimen name="restaurant_image_width">90sp</dimen>
+    <dimen name="slider_image_height">250sp</dimen>
+    <dimen name="slider_product_image_height">350dp</dimen>
+    <dimen name="bottom_shape_height">250sp</dimen>
+
+    <dimen name="text_size_h1">25sp</dimen><!-- for toolbar title heading text -->
+    <dimen name="text_size_h2">20sp</dimen><!-- for normal text -->
+    <dimen name="text_size_h3">16sp</dimen><!-- for normal text -->
+    <dimen name="text_size_h4">14sp</dimen><!-- for normal  text -->
+    <dimen name="text_size_h5">15sp</dimen> <!-- for normal text -->
+    <dimen name="text_size_h6">14sp</dimen> <!-- for normal text -->
+    <dimen name="text_size_h7">12sp</dimen><!-- for smallest text -->
+
+    <dimen name="left_margin">10sp</dimen>
+    <dimen name="right_margin">10sp</dimen>
+    <dimen name="top_margin">5sp</dimen>
+    <dimen name="bottom_margin">5sp</dimen>
+    <dimen name="profile_picture_height">60dp</dimen>
+    <dimen name="profile_picture_width">60dp</dimen>
+    <dimen name="elevation">8sp</dimen>
+    <dimen name="radius">8sp</dimen>
+    <dimen name="divider_height">2.5sp</dimen>
+
+</resources>
